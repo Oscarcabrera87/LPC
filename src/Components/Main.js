@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import RenderGrid from './RenderGrid'
 import SearchBar from './SearchBar'
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { Container, Row } from "react-bootstrap"
+// import { Container, Row } from "react-bootstrap"
 
 
 
@@ -30,14 +31,12 @@ const Main = () => {
     
 
     return (
-        <div className="Main">
+        <div>
         <Header />
+        <div>
         <SearchBar placeholder="What do you identify as?" search={search} setSearch={setSearch}  setResults={setResults} defaultData={defaultData} />
-            
-                    {results.map(card => (
-                        <RenderGrid key={card.id} {...card}/>
-                    ))}
-              
+        </div>
+        <RenderGrid results={results} />                
         <Footer />
         </div>
     )
