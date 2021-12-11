@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Main from "./Components/Main"
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux'
 import { ConfigureStore } from './redux/configureStore'
 
@@ -11,9 +11,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <div className="App">
-          <Main />
-        </div>
+        <Main className="App" />
       </BrowserRouter>
     </Provider>
   );

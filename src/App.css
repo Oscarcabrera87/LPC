@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
-
-body {
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
+*{
   margin: 0;
-  background-color: whitesmoke;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
 }
 .App {
   display: flex;
@@ -14,38 +12,74 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-.searchInputs {
-  margin-top: 105px;
-  display: flex;
+::selection{
+  color: #fff000;
+  background: #664AFF
 }
-
-.search input {
-  margin: 0 auto;
+.wrapper{
+  max-width: 450px;
+  margin: 150px auto;
+}
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
   position: relative;
-  background-color: white;
-  border: 0;
-  border-radius: 2px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  font-size: 18px;
-  padding: 15px;
-  height: 60px;
-  width: 25vw;
+  box-shadow: 0px 1px 5px 3px rgb(0,0,0,0.12);
 }
-
-.searchIcon {
-  height: 60px;
-  width: 50px;
-  background-color: white;
-  display: grid;
-  place-items: center;
-}
-
-input:focus {
+.search-input input{
+  height: 55px;
+  width: 100%;
   outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1 px 5px rgb(0, 0, 0, 0.1);
 }
-.searchIcon svg {
-  font-size: 35px;
+.search-input.active input{
+  border-radius: 5px 5px 0  0;
+}
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.sugg{
+  cursor: pointer;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  /* display: none; */
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #FFC107;
+  cursor: pointer;
 }
 
 #clearBtn {

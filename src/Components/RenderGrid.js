@@ -5,6 +5,7 @@ import { Card,
   CardBody, 
   CardTitle, 
   CardText} from "reactstrap"
+import { Link } from "react-router-dom";
 
 const RenderGrid = ({results}) => {
   const cardArray = results.map(card => (
@@ -19,11 +20,19 @@ const RenderGrid = ({results}) => {
               {`Summary:
               ${card.about}`}
           </CardText>
+          <CardText>
+              <Link 
+              to={`/details/${card.key}`}
+              key={card.key}
+              >
+              Details
+              </Link>
+          </CardText>
       </CardBody>
     </Card>
   ))
-  console.log("In RenderGrid passing cardarray")
-  console.log(cardArray)
+  // console.log("In RenderGrid passing cardarray")
+  console.log(results)
 
   
   return (

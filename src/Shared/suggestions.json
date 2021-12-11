@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "keyword": "Puerto Rican"
+    },
+    {
+        "id": 2,
+        "keyword": "Mexican"
+    },
+    {
+        "id": 3,
+        "keyword": "Dominican"
+    },
+    {
+        "id": 4,
+        "keyword": "Cuban"
+    },
+    {
+        "id": 5,
+        "keyword": "Chilean"
+    },
+    {
+        "id": 6,
+        "keyword": "Brazilian"
+    },
+    {
+        "id": 7,
+        "keyword": "Salvadoran"
+    },
+    {
+        "id": 8,
+        "keyword": "Guatemalan"
+    },
+    {
+        "id": 9,
+        "keyword": "Colombian"
+    },
+    {
+        "id": 10,
+        "keyword": "Masculine"
+    },
+    {
+        "id": 11,
+        "keyword": "Feminine"
+    },
+    {
+        "id": 12,
+        "keyword": "Unisex"
+    },
+    {
+        "id": 13,
+        "keyword": "Trans"
+    },
+    {
+        "id": 14,
+        "keyword": "Straight"
+    },
+    {
+        "id": 15,
+        "keyword": "Bisexual"
+    },
+    {
+        "id": 16,
+        "keyword": "Gay"
+    },
+    {
+        "id": 17,
+        "keyword": "Lesbian"
+    } 
+]
