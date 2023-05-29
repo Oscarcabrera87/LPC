@@ -3,7 +3,8 @@ import Suggestion from '../Shared/suggestions.json'
 
 export const initialState = {
     data: Data,
-    suggestion: Suggestion
+    suggestion: Suggestion,
+    
 }
 
 export const Reducer = (state = initialState, action) => {
