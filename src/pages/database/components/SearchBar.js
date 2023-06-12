@@ -19,27 +19,25 @@ const SearchBar = ({
   }) => {
     const querySuggestion = (e) => {
       setSearch(e.target.value)
-      console.log(search)
       const filteredSuggg = defaultAuto.filter((auto) => 
         auto.keyword.toLowerCase().includes(search.toLowerCase())
         )
         
         setSugg(filteredSuggg)
-        console.log(sugg)
     };
 // query logic for enter key and suggestion click
     const queryAutoComplete = (arr) => {
       setKeyword(arr.keyword)
       setSearch(keyword)
-      const filteredSearch = defaultData.filter((data) => {
+      const filteredSearch = defaultData.results.filter((data) => {
         return (
           data.iden.toLowerCase().includes(search.toLowerCase()) ||
           data.eth.toLowerCase().includes(search.toLowerCase()) ||
           data.gen.toLowerCase().includes(search.toLowerCase()) 
           
         )
+        
       })
-      console.log(arr.keyword)
       setPlaceholder(arr.keyword)
       setResults(filteredSearch)
       setSugg([])
@@ -48,7 +46,7 @@ const SearchBar = ({
 
     const queryJson = (e) => {
       if (e.key === "Enter") {
-        const filteredSearch = defaultData.filter((data) => {
+        const filteredSearch = defaultData.results.filter((data) => {
           return (
             data.eth.toLowerCase().includes(search.toLowerCase()) ||
             data.gen.toLowerCase().includes(search.toLowerCase()) ||
@@ -66,8 +64,6 @@ const SearchBar = ({
       setKeyword("")
       setPlaceholder("What do you Identify as?")
     };
-    console.log(`keyword: ${keyword}`)
-    console.log(search)
     return (
       <div className="wrapper">
         <div className="search-input">

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import RenderGrid from './RenderGrid'
-import SearchBar from './SearchBar'
-import Header from './Header'
-import Footer from './Footer'
+import RenderGrid from './components/RenderGrid'
+import SearchBar from './components/SearchBar'
 
+/* To-do:
+    1. Rendergrid will be a component that feeds a <Link to...> to every card after the map(...) => (). 
+    2. Clean up the state.
+    3. Verify props going into RenderGrid.*/
 
-
-const Main = () => {
+export default function Main() {
     const [defaultAuto, setDefaultAuto] = useState()
     const [defaultData, setDefaultData] = useState()
 
@@ -31,8 +32,7 @@ const Main = () => {
     }, [data, suggestion])  
    
     return (
-        <div>
-            <Header />
+        <div className='main'>
             <SearchBar 
             placeholder= {placeholder} 
             defaultData={defaultData} //JSON data for Grid
@@ -46,11 +46,9 @@ const Main = () => {
             setKeyword={setKeyword}
             setPlaceholder={setPlaceholder}
             />
-            <RenderGrid results={results} />                
-            <Footer />
+            <RenderGrid results={results} />           
         </div>
     )
     
     
 }
-export default Main
