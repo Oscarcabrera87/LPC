@@ -4,7 +4,7 @@ export default function RootLayout() {
   return (
     <div className="root-layout">
       <header>
-        <nav class="navbar navbar-dark">
+        <nav class="navbar nav bg-warning">
           <NavLink to="/">Home</NavLink>
           <NavLink to="about">About</NavLink>
           <NavLink to="help">Help</NavLink>
